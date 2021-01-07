@@ -3,6 +3,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Lesson } from './lesson/lesson.entity';
 import { LessonModule } from './lesson/lesson.module';
+import { StudentModule } from './student/student.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -14,6 +15,7 @@ import { LessonModule } from './lesson/lesson.module';
     }),
     GraphQLModule.forRoot({ autoSchemaFile: true }),
     LessonModule,
+    StudentModule,
   ],
   controllers: [],
   providers: [],
